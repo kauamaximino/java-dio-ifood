@@ -4,6 +4,7 @@ class MinhaClasse {
     int idade = 18;
     Double altura = 1.80;
 
+    System.out.println("Meu nome é " + meuNome + ", tenho " + idade + " anos e " + altura + " de altura.");
     System.out.println(nomeCompleto("Kauã","Maximino"));
   }
 
