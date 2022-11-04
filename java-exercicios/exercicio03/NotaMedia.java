@@ -12,13 +12,12 @@ public class NotaMedia {
 
       do {
         System.out.println("Digite o número: ");
-      numero = scanner.nextInt();
-      count += 1;
-      if (numero > maior) {
+        numero = scanner.nextInt();
+        count += 1;
+        if (numero > maior) {
         maior = numero;
-      }
-      media = media + numero;
-
+        }
+        media = media + numero;
       }
       while (count < 5);
 
