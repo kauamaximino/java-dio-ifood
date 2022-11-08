@@ -6,24 +6,24 @@ public class Main {
 
   public static void main(String[] args) {
 
-    Scanner leitor = new Scanner(System.in);
+    try (Scanner leitor = new Scanner(System.in)) {
+      int[] elementos = { 64, 137, -16, 43, 67, 81, -90, 212, 10, 75 };
 
-    int[] elementos = { 64, 137, -16, 43, 67, 81, -90, 212, 10, 75 };
+      int numero = leitor.nextInt();
 
-    int numero = leitor.nextInt();
+      boolean encontrado = false;
 
-    boolean encontrado = false;
-
-    for (int i = 0; i < elementos.length; i++) {
-      if (elementos[i] == numero) {
-        System.out.println("Achei " + numero + " na posição " + i);
-        encontrado = true;
-        break;
+      for (int i = 0; i < elementos.length; i++) {
+        if (elementos[i] == numero) {
+          System.out.println("Achei " + numero + " na posição " + i);
+          encontrado = true;
+          break;
+        }
       }
-    }
 
-    if (!encontrado) {
-      System.out.println("Numero " + numero + " nao encontrado");
+      if (!encontrado) {
+        System.out.println("Numero " + numero + " nao encontrado");
+      }
     }
   }
 }
